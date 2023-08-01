@@ -12,3 +12,12 @@ FROM cats
 INNER JOIN cat_owners
 ON cats.id = cat_owners.cat_id
 WHERE cat_owners.owner_id = 2;
+
+SELECT
+  cats.name AS cat_name,
+  owners.name AS owner_name
+FROM cats
+INNER JOIN cat_owners
+  ON cats.id = cat_owners.cat_id
+INNER JOIN owners
+  ON cat_owners.owner_id = owners.id;
